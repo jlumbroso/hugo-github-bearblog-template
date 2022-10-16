@@ -17,7 +17,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.89.4"
+          hugo-version: "0.104.3"
           extended: true
 
       - name: Build
@@ -28,3 +28,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          ## NOTE: uncomment below if using a custom domain
+          ## cname: github-pages.princeton.edu
